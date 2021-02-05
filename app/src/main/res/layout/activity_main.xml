@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <!--상단영역 : 버튼1~3까지 노출되는 프레그먼트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!--XML로 프레그먼트를 삽입한다. fragment태그를 사용하고
+         이처럼 하면 해당 XMl을 붙여넣기 한것과 동일하다.-->
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/topFragment"
+            class="com.kosmo.a40fragment.TopFragment"/>
+            <!--프레그먼트로 사용할 클래스를 패키지명을 포함하여 기술-->
+    </LinearLayout>
+
+    <!--하단영역 : 프레그먼트를 통해 각 화면(RGB)을 구성한다. 여기서는
+    Java코드를 통해 프레그먼트를 삽입한다.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:id="@+id/bottomLayout">
+
+    </LinearLayout>
+
+
+</LinearLayout>
